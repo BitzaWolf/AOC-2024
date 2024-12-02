@@ -1,3 +1,14 @@
 body {
+	background-color: #333;
+	color: #EEE;
     font-family: 'consolas', monospace;
+}
+
+a {
+	color: chartreuse;
+}
+
+.output {
+	min-height: 2rem;
+	border: 3px inset;
 }

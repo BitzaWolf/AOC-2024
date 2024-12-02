@@ -5,9 +5,31 @@
 </head>
 <body>
 <script src="https://unpkg.com/htmx.org@2.0.3"></script>
-<h1>Advent of Code 2024</h1>
-<div>
-	<button>Day 01</button>
+<script>
+	window.aoc = {};
+</script>
+<h1 id="TOP">Advent of Code 2024</h1>
+<p>A web-accessible version of my solutions for A.O.C. 2024!</p>
+<p>Debug output may stall/crash when using actual puzzle input (not demo puzzle input).
+Probably because it's trying to create an extremely long string. It might work better if I changed it to generate DOM elements
+but still not ideal to make thousands of DOM elements so rapidly. Just don't use Debug Output for big datasets.</p>
+<nav>
+	<ul>
+		<li><a href="#D01">Day 01</a>
+	</ul>
+</nav>
+
+<div id="D01">
+	<h2>Day 01</h2>
+	<script type="module" src="/scripts/days/Day01.js"></script>
+	<form>
+		<label for="D01IN">Input</label>
+		<textarea class="input" id="D01IN"></textarea>
+		<button onclick="aoc.d01.calc(event);">Calculate</button>
+		<button onclick="aoc.d01.calc(event, true);">Calculate (with debug output)</button>
+	</form>
+	<pre class="output"></pre>
+	<a href="#TOP">Back to top</a>
 </div>
 </body>
 </html>
